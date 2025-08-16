@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: validate project
-        uses: csaxton-ls/my_new_ci_cd_pipeline/.github/actions/validate@make_thing
+        uses: csaxton-ls/my_new_ci_cd_pipeline/.github/actions/validate@main
 
   do_the_things:
     needs: [validate_branch]
