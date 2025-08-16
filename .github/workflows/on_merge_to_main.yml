@@ -1,0 +1,12 @@
+name: on_merge_to_main
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  stuff_and_things:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: boop
+        run: echo "you've merged to main"
