@@ -5,6 +5,12 @@ on:
       - main
 
 jobs:
+  validate_branch:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: validate project
+        uses: csaxton-ls/my_new_ci_cd_pipeline/.github/actions/validate@make_thing
+
   do_the_things:
     runs-on: ubuntu-latest
     steps:

@@ -1,0 +1,24 @@
+name: validate project
+
+inputs:
+  python_version:
+    description: version of python to use e.g. 3.10
+    default: "3.13"
+    required: false
+    type: string
+
+runs:
+  using: "composite"
+  steps:
+    - name: checkout source
+      uses: actions/checkout@v4
+
+    - name: validate source
+      env:
+        PYTHONPATH: ${{ github.workspace }}
+      shell: bash
+      run: make validate
+
+
+
+
