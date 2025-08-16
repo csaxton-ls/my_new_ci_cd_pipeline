@@ -2,8 +2,16 @@
 name = "my-new-ci-cd-pipeline"
 version = "0.1.0"
 description = ""
-authors = ["csaxton-ls <craig.saxton@legitscript.com>"]
+authors = ["csaxton-ls csaxton123@example.com"]
 readme = "README.md"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0"
+version_files = [
+    "some_app/__version__.py",
+    "pyproject.toml:version"
+]
 
 [tool.poetry.dependencies]
 python = "^3.13"
