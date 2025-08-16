@@ -12,6 +12,7 @@ jobs:
         uses: csaxton-ls/my_new_ci_cd_pipeline/.github/actions/validate@make_thing
 
   do_the_things:
+    needs: [validate_branch]
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
